@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c50dbf0-13cb-4870-a27f-3481da4b4096" name="Changes" comment="initialization commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CellStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/CellTest.java" afterDir="false" />
+    <list default="true" id="4c50dbf0-13cb-4870-a27f-3481da4b4096" name="Changes" comment="cell status functionality - status &amp; flip">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/BoardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CellStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CellStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CellTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +22,22 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -50,7 +61,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.CellTest.executor": "Run",
+    "Gradle.CellTest.testDeadCellStatusIsDeadInUnderpopulation.executor": "Run",
+    "Gradle.CellTest.testDeadCellStatusWith3NeighborsLive.executor": "Run",
+    "Gradle.CellTest.testDeadCellStatusWith4NeighborsDoesNotLive.executor": "Run",
     "Gradle.CellTest.testIfNewCellIsAlwaysDead.executor": "Run",
+    "Gradle.CellTest.testLiveCellStatusWith2Neighbors.executor": "Run",
+    "Gradle.CellTest.testLiveCellStatusWith3NeighborsLive.executor": "Run",
+    "Gradle.CellTest.testLiveCellStatusWithMoreThan3Neighbors.executor": "Run",
     "Gradle.GameLogicTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -74,7 +91,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="CellTest.testIfNewCellIsAlwaysDead" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CellTest.testDeadCellStatusWith3NeighborsLive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -87,7 +104,103 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.CellTest.testIfNewCellIsAlwaysDead&quot;" />
+            <option value="&quot;org.example.CellTest.testDeadCellStatusWith3NeighborsLive&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CellTest.testDeadCellStatusWith4NeighborsDoesNotLive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.CellTest.testDeadCellStatusWith4NeighborsDoesNotLive&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CellTest.testLiveCellStatusWith2Neighbors" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.CellTest.testLiveCellStatusWith2Neighbors&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CellTest.testLiveCellStatusWith3NeighborsLive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.CellTest.testLiveCellStatusWith3NeighborsLive&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CellTest.testLiveCellStatusWithMoreThan3Neighbors" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.CellTest.testLiveCellStatusWithMoreThan3Neighbors&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -100,7 +213,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CellTest.testIfNewCellIsAlwaysDead" />
+        <item itemvalue="Gradle.CellTest.testDeadCellStatusWith4NeighborsDoesNotLive" />
+        <item itemvalue="Gradle.CellTest.testDeadCellStatusWith3NeighborsLive" />
+        <item itemvalue="Gradle.CellTest.testLiveCellStatusWith3NeighborsLive" />
+        <item itemvalue="Gradle.CellTest.testLiveCellStatusWithMoreThan3Neighbors" />
+        <item itemvalue="Gradle.CellTest.testLiveCellStatusWith2Neighbors" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706178997446</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cell status functionality - status &amp; flip">
+      <option name="closed" value="true" />
+      <created>1706366870889</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706366870889</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -144,6 +269,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialization commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initialization commit" />
+    <MESSAGE value="cell status functionality - status &amp; flip" />
+    <option name="LAST_COMMIT_MESSAGE" value="cell status functionality - status &amp; flip" />
   </component>
 </project>

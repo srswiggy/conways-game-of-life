@@ -1,6 +1,6 @@
 package org.example;
 
-import static org.example.CellStatus.*;
+import static org.example.CellStatus.ALIVE;
 
 public class Cell {
     private CellStatus status;
@@ -13,12 +13,20 @@ public class Cell {
         return status;
     }
 
-    public void flip() {
-        if(this.status == ALIVE) {
-            this.status = DEAD;
-        } else {
-            this.status = ALIVE;
-        }
+    public void flipStatus() {
+        this.status = this.status.flip();
     }
 
+    public void statusInNewGeneration(int liveNeighbors) {
+        if(this.status == ALIVE) {
+            if(liveNeighbors < 2 || liveNeighbors > 3) {
+                this.status = this.status.flip();
+            }
+        }
+        else {
+            if(liveNeighbors == 3) {
+                this.status = this.status.flip();
+            }
+        }
+    }
 }
