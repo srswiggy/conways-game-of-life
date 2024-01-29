@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c50dbf0-13cb-4870-a27f-3481da4b4096" name="Changes" comment="cell status functionality - status &amp; flip">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/BoardTest.java" afterDir="false" />
+    <list default="true" id="4c50dbf0-13cb-4870-a27f-3481da4b4096" name="Changes" comment="implement 4 game rules">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AliveCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DeadCell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AliveCellTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DeadCellTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Cell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CellStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CellStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CellTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CellTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +52,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2bRXWlQwsrKO8jbHTjlBgYQxomJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -60,6 +63,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.AliveCellTest.testIfIsAliveAlwaysReturnTrue.executor": "Run",
+    "Gradle.AliveCellTest.testLiveCellStatusInUnderpopulation.executor": "Run",
+    "Gradle.AliveCellTest.testLiveCellStatusWith2Neighbors.executor": "Run",
+    "Gradle.AliveCellTest.testLiveCellStatusWith3NeighborsLive.executor": "Run",
+    "Gradle.AliveCellTest.testLiveCellStatusWithMoreThan3Neighbors.executor": "Run",
     "Gradle.CellTest.executor": "Run",
     "Gradle.CellTest.testDeadCellStatusIsDeadInUnderpopulation.executor": "Run",
     "Gradle.CellTest.testDeadCellStatusWith3NeighborsLive.executor": "Run",
@@ -68,6 +76,10 @@
     "Gradle.CellTest.testLiveCellStatusWith2Neighbors.executor": "Run",
     "Gradle.CellTest.testLiveCellStatusWith3NeighborsLive.executor": "Run",
     "Gradle.CellTest.testLiveCellStatusWithMoreThan3Neighbors.executor": "Run",
+    "Gradle.DeadCellTest.testDeaRdCellStatusWith3NeighborsLive.executor": "Run",
+    "Gradle.DeadCellTest.testDeadCellStatusWith3NeighborsLive.executor": "Run",
+    "Gradle.DeadCellTest.testDeadCellStatusWith4NeighborsDoesNotLive.executor": "Run",
+    "Gradle.DeadCellTest.testIfIsAliveAlwaysReturnTrue.executor": "Run",
     "Gradle.GameLogicTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -90,8 +102,8 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="CellTest.testDeadCellStatusWith3NeighborsLive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.DeadCellTest.testDeadCellStatusWith4NeighborsDoesNotLive">
+    <configuration name="AliveCellTest.testLiveCellStatusWith3NeighborsLive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -104,7 +116,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.CellTest.testDeadCellStatusWith3NeighborsLive&quot;" />
+            <option value="&quot;org.example.AliveCellTest.testLiveCellStatusWith3NeighborsLive&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -115,7 +127,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CellTest.testDeadCellStatusWith4NeighborsDoesNotLive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AliveCellTest.testLiveCellStatusWithMoreThan3Neighbors" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -128,7 +140,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.CellTest.testDeadCellStatusWith4NeighborsDoesNotLive&quot;" />
+            <option value="&quot;org.example.AliveCellTest.testLiveCellStatusWithMoreThan3Neighbors&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -139,7 +151,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CellTest.testLiveCellStatusWith2Neighbors" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DeadCellTest.testDeaRdCellStatusWith3NeighborsLive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -152,7 +164,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.CellTest.testLiveCellStatusWith2Neighbors&quot;" />
+            <option value="&quot;org.example.DeadCellTest.testDeaRdCellStatusWith3NeighborsLive&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -163,7 +175,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CellTest.testLiveCellStatusWith3NeighborsLive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DeadCellTest.testDeadCellStatusWith3NeighborsLive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -176,7 +188,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.CellTest.testLiveCellStatusWith3NeighborsLive&quot;" />
+            <option value="&quot;org.example.DeadCellTest.testDeadCellStatusWith3NeighborsLive&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -187,7 +199,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CellTest.testLiveCellStatusWithMoreThan3Neighbors" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DeadCellTest.testDeadCellStatusWith4NeighborsDoesNotLive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -200,7 +212,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.CellTest.testLiveCellStatusWithMoreThan3Neighbors&quot;" />
+            <option value="&quot;org.example.DeadCellTest.testDeadCellStatusWith4NeighborsDoesNotLive&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -213,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CellTest.testDeadCellStatusWith4NeighborsDoesNotLive" />
-        <item itemvalue="Gradle.CellTest.testDeadCellStatusWith3NeighborsLive" />
-        <item itemvalue="Gradle.CellTest.testLiveCellStatusWith3NeighborsLive" />
-        <item itemvalue="Gradle.CellTest.testLiveCellStatusWithMoreThan3Neighbors" />
-        <item itemvalue="Gradle.CellTest.testLiveCellStatusWith2Neighbors" />
+        <item itemvalue="Gradle.DeadCellTest.testDeadCellStatusWith4NeighborsDoesNotLive" />
+        <item itemvalue="Gradle.DeadCellTest.testDeaRdCellStatusWith3NeighborsLive" />
+        <item itemvalue="Gradle.DeadCellTest.testDeadCellStatusWith3NeighborsLive" />
+        <item itemvalue="Gradle.AliveCellTest.testLiveCellStatusWith3NeighborsLive" />
+        <item itemvalue="Gradle.AliveCellTest.testLiveCellStatusWithMoreThan3Neighbors" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706366870889</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implement 4 game rules">
+      <option name="closed" value="true" />
+      <created>1706445048286</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706445048286</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,6 +290,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initialization commit" />
     <MESSAGE value="cell status functionality - status &amp; flip" />
-    <option name="LAST_COMMIT_MESSAGE" value="cell status functionality - status &amp; flip" />
+    <MESSAGE value="implement 4 game rules" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement 4 game rules" />
   </component>
 </project>
