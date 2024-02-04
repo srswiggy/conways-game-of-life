@@ -1,4 +1,4 @@
-package org.example;
+package org.example.cell;
 
 import org.example.cell.AliveCell;
 import org.example.cell.Cell;
@@ -35,5 +35,11 @@ class DeadCellTest {
         Cell nextStateCell = cell.nextState(liveNeighbors);
 
         assertEquals(nextStateCell.getClass(), DeadCell.class);
+    }
+
+    @Test
+    @DisplayName("Test toString outputs _")
+    void testIfToStringPrints_() {
+        assertEquals("_", new DeadCell().toString());
     }
 }
