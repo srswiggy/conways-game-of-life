@@ -12,4 +12,8 @@ public class OutputService {
         }
         System.out.println();
     }
+
+    public void printGeneration(int tick) {
+        System.out.println("Generation " + tick + ":");
+    }
 }

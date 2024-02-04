@@ -69,4 +69,26 @@ class OutputServiceTest {
 
         assertEquals("X _ _ \n_ X _ \n_ _ X \n\n", outContent.toString());
     }
+
+    @Test
+    @DisplayName("test printing tick")
+    public void printingTick3() {
+        int tickvalue = 3;
+
+        OutputService outputService = new OutputService();
+        outputService.printGeneration(tickvalue);
+
+        assertEquals("Generation 3:\n", outContent.toString());
+    }
+
+    @Test
+    @DisplayName("test printing tick")
+    public void printingTick342() {
+        int tickvalue = 342;
+
+        OutputService outputService = new OutputService();
+        outputService.printGeneration(tickvalue);
+
+        assertEquals("Generation 342:\n", outContent.toString());
+    }
 }

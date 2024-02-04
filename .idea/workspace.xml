@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c50dbf0-13cb-4870-a27f-3481da4b4096" name="Changes" comment="neighborcalculator strategy">
+    <list default="true" id="4c50dbf0-13cb-4870-a27f-3481da4b4096" name="Changes" comment="tostring tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DefaultNeighborCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DefaultNeighborCalculationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NeighborCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NeighborCalculationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/outputservice/OutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/outputservice/OutputService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/BoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DefaultNeighborCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DefaultNeighborCalculationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DefaultNeighborCalculationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/neighborcalculationservice/DefaultNeighborCalculationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/outputservice/OutputServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/outputservice/OutputServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,15 +71,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.AliveCellTest.executor": "Run",
     "Gradle.AliveCellTest.testIfIsAliveAlwaysReturnTrue.executor": "Run",
+    "Gradle.AliveCellTest.testIfToStringPrintsX.executor": "Run",
     "Gradle.AliveCellTest.testLiveCellStatusInUnderpopulation.executor": "Run",
     "Gradle.AliveCellTest.testLiveCellStatusWith2Neighbors.executor": "Run",
     "Gradle.AliveCellTest.testLiveCellStatusWith3NeighborsLive.executor": "Run",
     "Gradle.AliveCellTest.testLiveCellStatusWithMoreThan3Neighbors.executor": "Run",
     "Gradle.BoardTest (1).executor": "Run",
     "Gradle.BoardTest.executor": "Run",
+    "Gradle.BoardTest.testGridInitializationhasAllDeadCells.executor": "Run",
     "Gradle.BoardTest.testIfBoardGetsThrowsExceptionWith0.executor": "Run",
     "Gradle.BoardTest.testIfBoardGetsThrowsExceptionWithNegativeValues.executor": "Run",
+    "Gradle.BoardTest.testIfGetCellreturnsAliveCellsForAliveCells.executor": "Run",
+    "Gradle.BoardTest.testSetSeedFunctionFor50Percentage.executor": "Run",
+    "Gradle.BoardTest.testSetSeedFunctionFor70Percentage.executor": "Run",
     "Gradle.CellTest.executor": "Run",
     "Gradle.CellTest.testDeadCellStatusIsDeadInUnderpopulation.executor": "Run",
     "Gradle.CellTest.testDeadCellStatusWith3NeighborsLive.executor": "Run",
@@ -87,16 +94,24 @@
     "Gradle.CellTest.testLiveCellStatusWith2Neighbors.executor": "Run",
     "Gradle.CellTest.testLiveCellStatusWith3NeighborsLive.executor": "Run",
     "Gradle.CellTest.testLiveCellStatusWithMoreThan3Neighbors.executor": "Run",
+    "Gradle.DeadCellTest.executor": "Run",
     "Gradle.DeadCellTest.testDeaRdCellStatusWith3NeighborsLive.executor": "Run",
     "Gradle.DeadCellTest.testDeadCellStatusWith3NeighborsLive.executor": "Run",
     "Gradle.DeadCellTest.testDeadCellStatusWith4NeighborsDoesNotLive.executor": "Run",
     "Gradle.DeadCellTest.testIfIsAliveAlwaysReturnTrue.executor": "Run",
+    "Gradle.DefaultNeighborCalculationServiceTest.executor": "Run",
     "Gradle.DefaultNeighborCalculatorTest.executor": "Run",
     "Gradle.DefaultNeighborCalculatorTest.testFor0LiveNeighbor.executor": "Run",
     "Gradle.DefaultNeighborCalculatorTest.testFor2AliveNeighborGives2LiveNeighbor.executor": "Run",
     "Gradle.DefaultNeighborCalculatorTest.testForAll8neighbor.executor": "Run",
     "Gradle.DefaultNeighborCalculatorTest.testIfDefaultNeighborObjectIsGettingInitialiezed.executor": "Run",
     "Gradle.GameLogicTest.executor": "Run",
+    "Gradle.OutputServiceTest.executor": "Run",
+    "Gradle.OutputServiceTest.printingTick3.executor": "Run",
+    "Gradle.OutputServiceTest.printingTick342.executor": "Run",
+    "Gradle.OutputServiceTest.testPrint.executor": "Run",
+    "Gradle.OutputServiceTest.testPrintWith1AliveCell2DeadCell.executor": "Run",
+    "Gradle.OutputServiceTest.testPrinting3x3board.executor": "Run",
     "Gradle.conways-game-of-life [:Main.main()].executor": "Run",
     "Gradle.conways-game-of-life [dependencies].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -117,24 +132,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.outputservice" />
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DefaultNeighborCalculatorTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="conways-game-of-life.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DefaultNeighborCalculatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.BoardTest.testIfGetCellreturnsAliveCellsForAliveCells">
+    <configuration name="BoardTest.testGridInitializationhasAllDeadCells" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -147,7 +150,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.DefaultNeighborCalculatorTest&quot;" />
+            <option value="&quot;org.example.BoardTest.testGridInitializationhasAllDeadCells&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -158,7 +161,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="DefaultNeighborCalculatorTest.testFor0LiveNeighbor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BoardTest.testIfGetCellreturnsAliveCellsForAliveCells" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -171,7 +174,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.DefaultNeighborCalculatorTest.testFor0LiveNeighbor&quot;" />
+            <option value="&quot;org.example.BoardTest.testIfGetCellreturnsAliveCellsForAliveCells&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -182,7 +185,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="DefaultNeighborCalculatorTest.testFor2AliveNeighborGives2LiveNeighbor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BoardTest.testSetSeedFunctionFor50Percentage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -195,7 +198,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.DefaultNeighborCalculatorTest.testFor2AliveNeighborGives2LiveNeighbor&quot;" />
+            <option value="&quot;org.example.BoardTest.testSetSeedFunctionFor50Percentage&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -206,7 +209,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="DefaultNeighborCalculatorTest.testForAll8neighbor" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BoardTest.testSetSeedFunctionFor70Percentage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -219,7 +222,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.DefaultNeighborCalculatorTest.testForAll8neighbor&quot;" />
+            <option value="&quot;org.example.BoardTest.testSetSeedFunctionFor70Percentage&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="OutputServiceTest.printingTick342" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.outputservice.OutputServiceTest.printingTick342&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -232,11 +259,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DefaultNeighborCalculatorTest" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.DefaultNeighborCalculatorTest.testForAll8neighbor" />
-        <item itemvalue="Gradle.DefaultNeighborCalculatorTest.testFor0LiveNeighbor" />
-        <item itemvalue="Gradle.DefaultNeighborCalculatorTest.testFor2AliveNeighborGives2LiveNeighbor" />
+        <item itemvalue="Gradle.BoardTest.testIfGetCellreturnsAliveCellsForAliveCells" />
+        <item itemvalue="Gradle.BoardTest.testGridInitializationhasAllDeadCells" />
+        <item itemvalue="Gradle.BoardTest.testSetSeedFunctionFor70Percentage" />
+        <item itemvalue="Gradle.BoardTest.testSetSeedFunctionFor50Percentage" />
+        <item itemvalue="Gradle.OutputServiceTest.printingTick342" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +323,39 @@
       <option name="project" value="LOCAL" />
       <updated>1707052480243</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Renamed notificationcalculator class to notificationcalculationservice">
+      <option name="closed" value="true" />
+      <created>1707055975036</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707055975036</updated>
+    </task>
+    <task id="LOCAL-00007" summary="override cell tostring &amp; delegate printing to outputservice">
+      <option name="closed" value="true" />
+      <created>1707071098120</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707071098120</updated>
+    </task>
+    <task id="LOCAL-00008" summary="outputservice display to print">
+      <option name="closed" value="true" />
+      <created>1707073266145</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707073266145</updated>
+    </task>
+    <task id="LOCAL-00009" summary="tostring tests">
+      <option name="closed" value="true" />
+      <created>1707073632315</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707073632315</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,6 +375,10 @@
     <MESSAGE value="implement 4 game rules" />
     <MESSAGE value="cell interface, alivecell class &amp; deadcell class" />
     <MESSAGE value="neighborcalculator strategy" />
-    <option name="LAST_COMMIT_MESSAGE" value="neighborcalculator strategy" />
+    <MESSAGE value="Renamed notificationcalculator class to notificationcalculationservice" />
+    <MESSAGE value="override cell tostring &amp; delegate printing to outputservice" />
+    <MESSAGE value="outputservice display to print" />
+    <MESSAGE value="tostring tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="tostring tests" />
   </component>
 </project>

@@ -1,5 +1,6 @@
-package org.example;
+package org.example.neighborcalculationservice;
 
+import org.example.Board;
 import org.example.cell.AliveCell;
 import org.example.cell.DeadCell;
 import org.example.neighborcalculationservice.DefaultNeighborCalculationService;
