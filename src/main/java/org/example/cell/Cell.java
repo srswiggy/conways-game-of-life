@@ -1,4 +1,4 @@
-package org.example;
+package org.example.cell;
 
 public interface Cell {
     Cell nextState(int liveNeighbours);

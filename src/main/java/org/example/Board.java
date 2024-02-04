@@ -1,5 +1,12 @@
 package org.example;
 
+import org.example.cell.AliveCell;
+import org.example.cell.Cell;
+import org.example.cell.DeadCell;
+import org.example.neighborcalculationservice.DefaultNeighborCalculationService;
+import org.example.neighborcalculationservice.NeighborCalculationService;
+import org.example.outputservice.OutputService;
+
 import java.util.Random;
 
 public class Board {
@@ -13,13 +20,10 @@ public class Board {
         this.grid = new Cell[m][n];
         this.neighborCalculationService = new DefaultNeighborCalculationService();
         initializeBoardCellsDead();
-        display();
         setInitialSeeds(m, n, seedPercentage);
     }
 
     void initializeBoardCellsDead() {
-//        System.out.println("inside inititalize board cell");
-
         for(int i = 0; i < grid.length; i++) {
             for(int j = 0; j < grid[0].length; j++) {
                 this.grid[i][j] = new DeadCell();
@@ -67,21 +71,21 @@ public class Board {
         this.grid = newGrid;
     }
 
-    public void display() {
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[0].length; j++) {
-                System.out.print((grid[i][j].getClass() == AliveCell.class) ? "X " : "_ ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
+//    public void display() {
+//        for (int i = 0; i < grid.length; i++) {
+//            for (int j = 0; j < grid[0].length; j++) {
+//                System.out.print(grid[i][j].toString() + " ");
+//            }
+//            System.out.println();
+//        }
+//        System.out.println();
+//    }
 
     void evolve() throws InterruptedException {
-//        System.out.println("inside evolve");
+        OutputService outputService = new OutputService();
         while(true) {
 
-            display();
+            outputService.display(this, grid.length, grid[0].length);
             nextGen();
             Thread.sleep(1000);
         }

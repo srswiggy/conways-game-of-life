@@ -1,4 +1,4 @@
-package org.example;
+package org.example.cell;
 
 public class DeadCell implements Cell {
     @Override
@@ -10,5 +10,10 @@ public class DeadCell implements Cell {
     @Override
     public boolean isAlive() {
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "_";
     }
 }
