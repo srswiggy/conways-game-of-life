@@ -1,8 +1,13 @@
 package org.example;
 
+import org.example.inputservice.InputService;
+
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        Board board = new Board(10, 10, 50);
-                board.evolve();
+        List<Integer> values = new InputService().initialValues();
+        Board board = new Board(values.get(0), values.get(1), values.get(2));
+        board.evolve();
     }
 }
