@@ -7,11 +7,11 @@ import static org.mockito.Mockito.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DefaultNeighborCalculatorTest {
+class DefaultNeighborCalculationServiceTest {
     @Test
     @DisplayName("test if the object is getting initialized")
     void testIfDefaultNeighborObjectIsGettingInitialized() {
-        assertDoesNotThrow(DefaultNeighborCalculator::new);
+        assertDoesNotThrow(DefaultNeighborCalculationService::new);
     }
 
     @Test
@@ -28,7 +28,7 @@ class DefaultNeighborCalculatorTest {
         when(board.getCell(2, 0)).thenReturn(new DeadCell());
         when(board.getCell(1, 0)).thenReturn(new DeadCell());
 
-        DefaultNeighborCalculator defaultNeighborCalculator = new DefaultNeighborCalculator();
+        DefaultNeighborCalculationService defaultNeighborCalculator = new DefaultNeighborCalculationService();
 
         int liveNeighbors = defaultNeighborCalculator.calculateNeighbors(board, 1, 1);
 
@@ -50,7 +50,7 @@ class DefaultNeighborCalculatorTest {
         when(board.getCell(2, 0)).thenReturn(new DeadCell());
 
 
-        DefaultNeighborCalculator defaultNeighborCalculator = new DefaultNeighborCalculator();
+        DefaultNeighborCalculationService defaultNeighborCalculator = new DefaultNeighborCalculationService();
         int numberOfLiveNeighbors = defaultNeighborCalculator.calculateNeighbors(board, 1,1);
 
         assertEquals(2, numberOfLiveNeighbors);
@@ -71,7 +71,7 @@ class DefaultNeighborCalculatorTest {
         when(board.getCell(2, 0)).thenReturn(new AliveCell());
         when(board.getCell(1, 0)).thenReturn(new AliveCell());
 
-        DefaultNeighborCalculator defaultNeighborCalculator = new DefaultNeighborCalculator();
+        DefaultNeighborCalculationService defaultNeighborCalculator = new DefaultNeighborCalculationService();
 
         int liveNeighbors = defaultNeighborCalculator.calculateNeighbors(board, 1, 1);
 

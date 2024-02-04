@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c50dbf0-13cb-4870-a27f-3481da4b4096" name="Changes" comment="cell interface, alivecell class &amp; deadcell class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DefaultNeighborCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/NeighborCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DefaultNeighborCalculatorTest.java" afterDir="false" />
+    <list default="true" id="4c50dbf0-13cb-4870-a27f-3481da4b4096" name="Changes" comment="neighborcalculator strategy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DefaultNeighborCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DefaultNeighborCalculationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/NeighborCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/NeighborCalculationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/BoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DefaultNeighborCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/DefaultNeighborCalculationServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +288,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706553497100</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="neighborcalculator strategy">
+      <option name="closed" value="true" />
+      <created>1707052480243</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707052480243</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,6 +315,7 @@
     <MESSAGE value="cell status functionality - status &amp; flip" />
     <MESSAGE value="implement 4 game rules" />
     <MESSAGE value="cell interface, alivecell class &amp; deadcell class" />
-    <option name="LAST_COMMIT_MESSAGE" value="cell interface, alivecell class &amp; deadcell class" />
+    <MESSAGE value="neighborcalculator strategy" />
+    <option name="LAST_COMMIT_MESSAGE" value="neighborcalculator strategy" />
   </component>
 </project>

@@ -4,18 +4,17 @@ import java.util.Random;
 
 public class Board {
     Cell[][] grid;
-    NeighborCalculator neighborCalculator;
+    NeighborCalculationService neighborCalculationService;
 
     Board(int m, int n, int seedPercentage) {
         if(m <= 0 || n <= 0 )  {
             throw new IllegalArgumentException("M, N or Seed Percentage cannot be equal or less than 0");
         }
         this.grid = new Cell[m][n];
-        this.neighborCalculator = new DefaultNeighborCalculator();
+        this.neighborCalculationService = new DefaultNeighborCalculationService();
         initializeBoardCellsDead();
         display();
         setInitialSeeds(m, n, seedPercentage);
-//        System.out.println("inside constructor");
     }
 
     void initializeBoardCellsDead() {
@@ -60,7 +59,7 @@ public class Board {
         Cell[][] newGrid = new Cell[this.grid.length][this.grid[0].length];
         for(int i = 0; i < grid.length; i++) {
             for(int j = 0; j < grid[0].length; j++) {
-                int liveNeighbors = this.neighborCalculator.calculateNeighbors(this, i, j);
+                int liveNeighbors = this.neighborCalculationService.calculateNeighbors(this, i, j);
                 newGrid[i][j] = this.grid[i][j].nextState(liveNeighbors);
             }
         }

@@ -1,6 +1,6 @@
 package org.example;
 
-public class DefaultNeighborCalculator implements NeighborCalculator{
+public class DefaultNeighborCalculationService implements NeighborCalculationService {
     @Override
     public int calculateNeighbors(Board board, int row, int col) {
         int count = 0;
