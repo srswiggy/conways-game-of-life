@@ -1,4 +1,8 @@
-package org.example;
+package org.example.neighborcalculationservice;
+
+import org.example.cell.AliveCell;
+import org.example.Board;
+import org.example.cell.Cell;
 
 public class DefaultNeighborCalculationService implements NeighborCalculationService {
     @Override

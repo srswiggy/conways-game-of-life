@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.cell.AliveCell;
+import org.example.cell.Cell;
+import org.example.cell.DeadCell;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
